@@ -3,6 +3,18 @@ const cardForm = document.getElementById('card-form');
 const cardNameInput = document.getElementById('card-name');
 const cardDescriptionInput = document.getElementById('card-description');
 const cardContainer = document.getElementById('card-container');
+
+//Arrays For the radom card Generator
+const firstNames = ['Iron', 'Shadow', 'Luna', 'Blaze', 'Storm'];
+const lastNames = ['Knight', 'Phantom', 'Caller', 'Hunter', 'Titan'];
+const classes = ['Warrior', 'Mage', 'Beast', 'Rogue'];
+const traits = ['burning', 'ancient', 'cursed', 'swift', 'arcane'];
+const origins = ['from the north', 'from the void', 'from the hidden forest'];
+//Function to generate a random card description using the arrays above
+function getRandomHero(arr){
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
 //creating a submit btn event listener so the user could submit the card
 cardForm.addEventListener('submit', function(event) {
     event.preventDefault();
