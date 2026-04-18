@@ -13,6 +13,7 @@ cardForm.addEventListener('submit', function(event) {
     if (cardName && cardDescription) {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
+        //creating the inner HTML for the card element
         cardElement.innerHTML = `
             <h2>${cardName}</h2>
             <p>${cardDescription}</p>
@@ -23,3 +24,4 @@ cardForm.addEventListener('submit', function(event) {
         cardDescriptionInput.value = '';
     }
 });
+
