@@ -15,7 +15,7 @@ cardForm.addEventListener('submit', function(event) {
         cardElement.classList.add('card');
         //creating the inner HTML for the card element
         cardElement.innerHTML = `
-            <h2>${cardName}</h2>
+            <h2 class="card-title">${cardName}</h2>
             <p>${cardDescription}</p>
         `;
         cardContainer.appendChild(cardElement);
