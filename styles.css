@@ -39,3 +39,25 @@ form#card-form {
     background-color: #f9f9f9;
     ;
 }
+
+#card-name,
+#generate-legend,
+#add-card {
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #bca16a;
+	font-size: 1rem;
+}
+
+#generate-legend,
+#add-card {
+	cursor: pointer;
+	font-weight: 700;
+	color: #fff8e1;
+	background-color: #5f4325;
+}
+
+#generate-legend:hover,
+#add-card:hover {
+	background-color: #7a5832;
+}
