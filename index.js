@@ -15,6 +15,16 @@ function getRandomHero(arr){
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
 }
+function generateRandomCardDescription() {
+    const firstName = getRandomHero(firstNames);
+    const lastName = getRandomHero(lastNames);
+    const heroClass = getRandomHero(classes);
+    const trait = getRandomHero(traits);
+    const origin = getRandomHero(origins);
+
+    return `${firstName} ${lastName}, the ${trait} ${heroClass} ${origin}.`;
+}
+
 //creating a submit btn event listener so the user could submit the card
 cardForm.addEventListener('submit', function(event) {
     event.preventDefault();
