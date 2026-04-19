@@ -56,4 +56,6 @@ cardForm.addEventListener('submit', function(event) {
         cardNameInput.value = '';
     }
 });
-
+const attack = Math.floor(Math.random() * 10) + 1;
+const defense = Math.floor(Math.random() * 10) + 1;
+const health = Math.floor(Math.random() * 20) + 1;
