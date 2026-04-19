@@ -2,7 +2,7 @@
 	width: 240px;
 	padding: 12px;
 	margin: 12px 0;
-	border: 3px solid #c9a44c;
+	border: 3px solid #fafafa;
 	border-radius: 12px;
 	background: linear-gradient(180deg, #f3e7c2 0%, #ddc78a 100%);
 	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
@@ -33,7 +33,7 @@
     margin: 0 auto;
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff8e1;
+    background-color: #fcfcfc;
 }
 
 form#card-form {
