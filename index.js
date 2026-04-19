@@ -59,3 +59,15 @@ cardForm.addEventListener('submit', function(event) {
 const attack = Math.floor(Math.random() * 10) + 1;
 const defense = Math.floor(Math.random() * 10) + 1;
 const health = Math.floor(Math.random() * 20) + 1;
+
+cardElement.innerHTML = `
+    <h2 class="card-title">${cardName}</h2>
+    <p>${cardDescription}</p>
+    <p>Attack: ${attack}</p>
+    <p>Defense: ${defense}</p>
+    <p>Health: ${health}</p>
+`;
+
+cardElement.dataset.attack = attack;
+cardElement.dataset.defense = defense;
+cardElement.dataset.health = health;
