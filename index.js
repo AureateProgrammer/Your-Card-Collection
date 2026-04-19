@@ -59,7 +59,7 @@ cardForm.addEventListener('submit', function(event) {
 const attack = Math.floor(Math.random() * 10) + 1;
 const defense = Math.floor(Math.random() * 10) + 1;
 const health = Math.floor(Math.random() * 20) + 1;
-
+//Adding the attack, defense, and health values to the card element's inner HTML and setting them as data attributes for potential future use
 cardElement.innerHTML = `
     <h2 class="card-title">${cardName}</h2>
     <p>${cardDescription}</p>
