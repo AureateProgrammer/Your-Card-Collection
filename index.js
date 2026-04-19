@@ -79,6 +79,23 @@ battleButton.addEventListener('click', function () {
     const cardTwo = cards[1];
 });
 
+const cardOnePower =
+    Number(cardOne.dataset.attack) +
+    Number(cardOne.dataset.defense) +
+    Number(cardOne.dataset.health);
+
+const cardTwoPower =
+    Number(cardTwo.dataset.attack) +
+    Number(cardTwo.dataset.defense) +
+    Number(cardTwo.dataset.health);
+
+
+    const cardOneRoll = Math.floor(Math.random() * 6) + 1;
+const cardTwoRoll = Math.floor(Math.random() * 6) + 1;
+
+const cardOneFinal = cardOnePower + cardOneRoll;
+const cardTwoFinal = cardTwoPower + cardTwoRoll;
+
 cardElement.dataset.attack = attack;
 cardElement.dataset.defense = defense;
 cardElement.dataset.health = health;
