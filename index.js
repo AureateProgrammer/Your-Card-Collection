@@ -11,7 +11,7 @@ const classes = ['Warrior', 'Mage', 'Beast', 'Rogue'];
 const traits = ['burning', 'ancient', 'cursed', 'swift', 'arcane'];
 const origins = ['from the north', 'from the void', 'from the hidden forest'];
 //Function to generate a random card description using the arrays above
-function getRandomHero(arr){
+function getRandomHero(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
 }
@@ -31,15 +31,15 @@ function generateRandomCardDescription() {
     return `A ${trait} ${randomClass} ${origin}.`;
 }
 
-generateLegendButton.addEventListener('click', function() {
+generateLegendButton.addEventListener('click', function () {
     cardNameInput.value = generateLegendName();
     cardNameInput.focus();
 });
 
 //creating a submit btn event listener so the user could submit the card
-cardForm.addEventListener('submit', function(event) {
+cardForm.addEventListener('submit', function (event) {
     event.preventDefault();
-//grabbing the values from the input fields and trimming any extra whitespace
+    //grabbing the values from the input fields and trimming any extra whitespace
     const cardName = cardNameInput.value.trim();
     const cardDescription = generateRandomCardDescription();
     //checking if the card name is not empty before creating a new card element
@@ -67,6 +67,17 @@ cardElement.innerHTML = `
     <p>Defense: ${defense}</p>
     <p>Health: ${health}</p>
 `;
+
+battleButton.addEventListener('click', function () {
+    const cards = document.querySelectorAll('.card');
+
+    if (cards.length < 2) {
+        return;
+    }
+
+    const cardOne = cards[0];
+    const cardTwo = cards[1];
+});
 
 cardElement.dataset.attack = attack;
 cardElement.dataset.defense = defense;
